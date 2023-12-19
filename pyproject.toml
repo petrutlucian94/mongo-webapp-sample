@@ -1,0 +1,17 @@
+[project]
+name = "mongodb_webapp_sample"
+version = "0.0.1"
+authors = [
+  {name="Lucian Petrut", email="lpetrut@cloudbasesolutions.com" },
+]
+description = "A sample MongoDB web application for Canonical trainings."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "Flask>=3.0.0",
+  "pymongo>=4.0.0"
+]
