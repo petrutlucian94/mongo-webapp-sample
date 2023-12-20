@@ -1,5 +1,5 @@
 [project]
-name = "mongodb_webapp_sample"
+name = "mongo_webapp_sample"
 version = "0.0.1"
 authors = [
   {name="Lucian Petrut", email="lpetrut@cloudbasesolutions.com" },
@@ -11,7 +11,10 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
-dependencies = [
-  "Flask>=3.0.0",
-  "pymongo>=4.0.0"
-]
+dynamic = ["dependencies"]
+
+[project.scripts]
+mongo-webapp-sample-api = "mongo_webapp_sample.cmd.api:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
