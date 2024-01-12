@@ -1,0 +1,23 @@
+name: mongo-webapp-sample
+display-name: |
+  mongo-webapp-sample
+description: |
+  This charm is used to deploy a sample web application written in Python,
+  meant to showcase Canonical's Charmed MongoDB solution.
+summary: |
+  MongoDB webapp sample charm for Kubernetes
+assumes:
+  - juju >= 3.1
+  - k8s-api
+containers:
+  web-server:
+    resource: web-server-image
+resources:
+  web-server-image:
+    type: oci-image
+    description: Mongo webapp sample OCI image
+    upstream-source: lpetrut/mongo-webapp-sample:latest
+requires:
+  database:
+    interface: mongodb_client
+    limit: 1

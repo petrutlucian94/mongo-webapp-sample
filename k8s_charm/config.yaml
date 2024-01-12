@@ -1,0 +1,29 @@
+options:
+  port:
+    default: 8000
+    description: Listening port
+    type: int
+  debug:
+    default: false
+    description: "Enable debug logging"
+    type: boolean
+  mongo_url:
+    default: ""
+    description: "MongoDB URL"
+    type: string
+  mongo_db_name:
+    default: "sample_app"
+    description: "MongoDB database name"
+    type: string
+  mongo_conn_timeout:
+    default: 5
+    description: "MongoDB connection timeout (s)"
+    type: int
+  mongo_op_timeout:
+    default: 10
+    description: "MongoDB operation timeout (s)"
+    type: int
+  workers:
+    default: 4
+    description: "The number of worker processes that serve the application"
+    type: int
