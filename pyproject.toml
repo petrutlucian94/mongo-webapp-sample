@@ -18,3 +18,8 @@ mongo-webapp-sample-api = "mongo_webapp_sample.cmd.api:main"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["mongo_webapp_sample*"]
+where = ["."]
+namespaces = false
